@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Uploader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="screen">
+
+    <!-- LEFT: mood panel -->
+    <aside class="side">
+      <div class="side-inner">
+        <span class="mark">01 / UPLOAD</span>
+        <h2>Every image<br>tells a story.<br>Bring yours in.</h2>
+        <p class="side-note">JPG · PNG · GIF — up to whatever your browser can hold, previewed instantly, right here.</p>
+      </div>
+      <div class="grain"></div>
+      <div class="frame-corner ftl"></div>
+      <div class="frame-corner fbr"></div>
+    </aside>
+
+    <!-- RIGHT: uploader -->
+    <main class="wrap">
+      <div class="card">
+        <div class="header">
+          <span class="eyebrow">Media Upload</span>
+          <h1>Add your image</h1>
+          <p class="lede">Drag a file into the frame, or click to browse.</p>
+        </div>
+
+        <div id="dropzone" tabindex="0">
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="corner bl"></span>
+          <span class="corner br"></span>
+
+          <div class="dz-content">
+            <svg class="dz-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M12 16V4M12 4l-4 4M12 4l4 4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="dz-main">Drop your image here</p>
+            <p class="dz-sub">or click to browse</p>
+          </div>
+
+          <input type="file" id="fileInput" accept="image/jpeg,image/png,image/gif" hidden>
+        </div>
+
+        <div id="error" class="error" role="alert"></div>
+
+        <div id="previewArea"></div>
+      </div>
+
+      <p class="footnote">Files stay in your browser — nothing is sent anywhere.</p>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
